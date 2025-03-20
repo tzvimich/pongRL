@@ -482,7 +482,7 @@ def main():
                 terminal = False
             action = dddqn_agent.get_action(frame_number, pong_wrapper.state, evaluation=True)
             # Step action
-            _, reward, terminal, truncated, info = pong_wrapper.step(action)
+            _, reward, terminal, _ = pong_wrapper.step(action)
             evaluate_frame_number += 1
             episode_reward_sum += reward
             # On game-over
